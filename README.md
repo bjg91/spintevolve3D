@@ -3,4 +3,5 @@ This is an extension for OOMMF that allows users to include 3D spin polarized cu
 
 To install, move these files to ...\oommf\app\oxs\local\ 
 and in the command prompt, type: 
+
 cd ...\oommf & tclsh oommf.tcl pimake 
