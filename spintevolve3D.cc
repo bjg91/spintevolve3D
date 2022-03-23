@@ -499,7 +499,7 @@ void Anv_SpinTEvolve3D::Calculate_dm_dt //BRIAN: This is where the LLG equation 
         gradi_m *= u_x;// gradi_m=u*pm_px 
 
         ugrad_m += gradi_m;
-        gradi_m = (0., 0., 0);
+        gradi_m.Set(0., 0., 0);
 
         if (y > 0) {
             j = i - n_x;
@@ -532,7 +532,7 @@ void Anv_SpinTEvolve3D::Calculate_dm_dt //BRIAN: This is where the LLG equation 
         gradi_m *= u_y;// gradi_m=u*pm_py
 
         ugrad_m += gradi_m;
-        gradi_m = (0., 0., 0);
+        gradi_m.Set(0., 0., 0);
 
         if (z > 0) {
             j = i - n_x * n_y;
@@ -2231,7 +2231,7 @@ void Anv_SpinTEvolve3D::UpdateSpinTorqueOutputs(const Oxs_SimState& state)
           gradi_m *= u_x;// gradi_m=u*pm_px 
 
           ugrad_m += gradi_m;
-          gradi_m = (0., 0., 0);
+          gradi_m.Set(0., 0., 0);
 
           if (y > 0) {
               j = i - n_x;
@@ -2264,7 +2264,7 @@ void Anv_SpinTEvolve3D::UpdateSpinTorqueOutputs(const Oxs_SimState& state)
           gradi_m *= u_y;// gradi_m=u*pm_py
 
           ugrad_m += gradi_m;
-          gradi_m = (0., 0., 0);
+          gradi_m.Set(0., 0., 0);
 
           if (z > 0) {
               j = i - n_x * n_y;
@@ -2329,5 +2329,3 @@ void Anv_SpinTEvolve3D::UpdateSpinTorqueOutputs(const Oxs_SimState& state)
 			ave_u_output.cache.state_id = state.Id();
 	}
 }
-
-
